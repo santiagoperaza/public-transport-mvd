@@ -1,7 +1,6 @@
-import { fetchBuses } from "./utils/fetchBuses";
-import { fetchLines } from "./utils/fetchLines";
+import { getBuses } from "./bus";
 
 (async () => {
-  const lines = await fetchLines();
-  console.log(lines);
+  const result = await getBuses({ busid: 714});
+  console.log(result);
 })()

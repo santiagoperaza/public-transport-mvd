@@ -1,10 +1,12 @@
 import 'dotenv/config'
 import { Buffer } from 'buffer';
+import config from '../config/config';
 
 const fetchAuthToken = async (): Promise<string> => {
-  let basicAuth = Buffer.from(`${process.env.CLIENT_ID}:${process.env.CLIENT_SECRET}`).toString("base64");
+  const { clientId, clientSecret, mvdApiAuthUrl } = config;
+  let basicAuth = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
   const response = await fetch(
-    "https://mvdapi-auth.montevideo.gub.uy/auth/realms/pci/protocol/openid-connect/token",
+    mvdApiAuthUrl,
     {
       method: "POST",
       body: "grant_type=client_credentials",
