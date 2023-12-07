@@ -1,19 +1,20 @@
-import { GetAllBusesDataOptions } from "../bus";
-import config from "../config/config";
-import fetchAuthToken from "./fetchAuthToken";
+import { GetAllBusesDataOptions } from '../bus';
+import config from '../config/config';
+import fetchAuthToken from './fetchAuthToken';
 
 const fetchApi = async (path: string, parameters?: Map<string, any>) => {
   const { mvdApiBaseUrl } = config;
-  const token = await fetchAuthToken(); 
+  const token = await fetchAuthToken();
 
   const authToken = `Bearer ${token}`;
   const apiRes = await fetch(
-    `${mvdApiBaseUrl}/${path}?` + new URLSearchParams(Object.fromEntries(parameters!!)).toString(),
+    `${mvdApiBaseUrl}/${path}?` +
+      new URLSearchParams(Object.fromEntries(parameters!!)).toString(),
     {
       headers: {
-        "Content-type": "application/json",
-        Authorization: authToken,
-      },
+        'Content-type': 'application/json',
+        Authorization: authToken
+      }
     }
   );
   if (!apiRes.ok) {
@@ -22,7 +23,6 @@ const fetchApi = async (path: string, parameters?: Map<string, any>) => {
 
   return apiRes.json();
 };
-
 
 export const fetchBuses = async (options?: GetAllBusesDataOptions) => {
   let parameters = new Map<string, any>();
