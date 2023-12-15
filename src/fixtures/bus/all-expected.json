@@ -1,0 +1,102 @@
+[
+  {
+    "id": 377,
+    "company": "CUTCSA",
+    "line": "148",
+    "timestamp": "2023-12-14T17:10:39.000-03",
+    "origin": "CIUDADELA",
+    "destination": "AVIACIÓN CIVIL",
+    "location": { "type": "Point", "coordinates": [-56.222027, -34.80622] },
+    "special": false
+  },
+  {
+    "id": 12,
+    "company": "CUTCSA",
+    "line": "105",
+    "timestamp": "2023-12-14T17:10:49.000-03",
+    "origin": "PLAZA INDEPENDENCIA",
+    "destination": "GEANT",
+    "location": { "type": "Point", "coordinates": [-56.073277, -34.882526] },
+    "special": false
+  },
+  {
+    "id": 749,
+    "company": "CUTCSA",
+    "line": "169",
+    "timestamp": "2023-12-14T17:10:38.000-03",
+    "origin": "CIUDADELA",
+    "destination": "TOLEDO CHICO",
+    "location": { "type": "Point", "coordinates": [-56.183723, -34.884556] },
+    "special": false
+  },
+  {
+    "id": 85,
+    "company": "COETC",
+    "line": "427",
+    "timestamp": "2023-12-14T17:10:46.000-03",
+    "origin": "IGUÁ",
+    "destination": "UAM (POR FACULTAD DE CIENCIAS)",
+    "location": { "type": "Point", "coordinates": [-56.19185, -34.900627] },
+    "special": false
+  },
+  {
+    "id": 60,
+    "company": "COME",
+    "line": "546",
+    "timestamp": "2023-12-14T17:05:55.000-03",
+    "origin": "BELVEDERE",
+    "destination": "PORTONES",
+    "location": { "type": "Point", "coordinates": [-56.083206, -34.8823] },
+    "special": false
+  },
+  {
+    "id": 10,
+    "company": "COETC",
+    "line": "G",
+    "timestamp": "2023-12-14T17:10:40.000-03",
+    "origin": "PORTONES",
+    "destination": "LA PAZ",
+    "location": { "type": "Point", "coordinates": [-56.22414, -34.799355] },
+    "special": false
+  },
+  {
+    "id": 370,
+    "company": "CUTCSA",
+    "line": "158",
+    "timestamp": "2023-12-14T17:10:37.000-03",
+    "origin": "C. VIEJA",
+    "destination": "GRUTA DE LOURDES",
+    "location": { "type": "Point", "coordinates": [-56.18611, -34.877388] },
+    "special": false
+  },
+  {
+    "id": 634,
+    "company": "CUTCSA",
+    "line": "124",
+    "timestamp": "2023-12-14T17:10:44.000-03",
+    "origin": "C. VIEJA",
+    "destination": "SANTA CATALINA",
+    "location": { "type": "Point", "coordinates": [-56.24422, -34.87311] },
+    "special": false
+  },
+  {
+    "id": 211,
+    "company": "CUTCSA",
+    "line": "124",
+    "timestamp": "2023-12-14T17:10:35.000-03",
+    "origin": "C. VIEJA",
+    "destination": "SANTA CATALINA",
+    "location": { "type": "Point", "coordinates": [-56.197945, -34.907166] },
+    "special": false
+  },
+  {
+    "id": 1105,
+    "company": "CUTCSA",
+    "line": "100",
+    "timestamp": "2023-12-14T17:10:41.000-03",
+    "origin": "PLAZA ESPAÑA",
+    "destination": "VILLA FARRÉ",
+    "location": { "type": "Point", "coordinates": [-56.15008, -34.88069] },
+    "special": false
+  }
+]
