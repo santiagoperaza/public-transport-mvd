@@ -1,22 +1,24 @@
 import { GetAllBusesDataOptions } from '../bus';
 import config from '../config/config';
 import fetchAuthToken from './fetchAuthToken';
+import fetch from 'node-fetch';
 
-const fetchApi = async (path: string, parameters?: Map<string, any>) => {
+const fetchApi = async (path: string, parameters?: Record<string, string>) => {
   const { mvdApiBaseUrl } = config;
   const token = await fetchAuthToken();
-
   const authToken = `Bearer ${token}`;
-  const apiRes = await fetch(
-    `${mvdApiBaseUrl}/${path}?` +
-      new URLSearchParams(Object.fromEntries(parameters!!)).toString(),
-    {
-      headers: {
-        'Content-type': 'application/json',
-        Authorization: authToken
-      }
+  console.log(authToken);
+  const urlWithPath = `${mvdApiBaseUrl}/${path}`;
+  const url =
+    Object.keys(parameters || {}).length !== 0
+      ? `${urlWithPath}?` + new URLSearchParams(parameters).toString()
+      : urlWithPath;
+  const apiRes = await fetch(url, {
+    headers: {
+      'Content-type': 'application/json',
+      Authorization: authToken
     }
-  );
+  });
   if (!apiRes.ok) {
     throw new Error(`${path} fetch failed`);
   }
@@ -25,12 +27,15 @@ const fetchApi = async (path: string, parameters?: Map<string, any>) => {
 };
 
 export const fetchBuses = async (options?: GetAllBusesDataOptions) => {
-  let parameters = new Map<string, any>();
-  parameters.set('company', options?.company?.toUpperCase());
-  parameters.set('busId', options?.busid);
-  parameters.set('busstopid', options?.busstopid);
-  parameters.set('lines', options?.lines);
-  parameters.set('linevariantsids', options?.linevariantsids);
+  // const parameters = new Map<string, string>();
+  const parameters: Record<string, string> = {
+    ...(options?.company && { company: options?.company?.toUpperCase() }),
+    ...(options?.busid && { busId: options?.busid.toString() }),
+    ...(options?.busstopid && { busId: options?.busstopid.toString() }),
+    ...(options?.lines && { lines: options?.lines.toString() }),
+    ...(options?.linevariantsids && { linevariantsids: options?.linevariantsids.toString() })
+  };
+
   return fetchApi('buses', parameters);
 };
 

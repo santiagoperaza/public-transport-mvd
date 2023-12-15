@@ -65,9 +65,7 @@ interface Location {
   coordinates: [number, number];
 }
 
-export async function getBuses(
-  options?: GetAllBusesDataOptions
-): Promise<Array<Bus>> {
+export async function getBuses(options?: GetAllBusesDataOptions): Promise<Array<Bus>> {
   const buses = (await fetchBuses(options)) as Array<GetAllBusesDataResponse>;
   const results: Array<Bus> = buses.map(bus => ({
     id: bus.busId,
@@ -96,17 +94,10 @@ export async function getBusStops(): Promise<Array<BusStop>> {
 }
 
 export async function getBusStopLines(stopId: number): Promise<Array<Line>> {
-  const lines = (await fetchBusStopLines(
-    stopId
-  )) as Array<GetAllBusStopsLinesResponse>;
+  const lines = (await fetchBusStopLines(stopId)) as Array<GetAllBusStopsLinesResponse>;
   const results: Array<Line> = lines.map(line => ({
     id: line.lineId,
     line: line.line
   }));
   return results;
 }
-
-export default {
-  getBusStops,
-  getBuses
-};

@@ -1,0 +1,82 @@
+[
+  {
+    "busstopId": 6276,
+    "street1": "RAMON CASTRIZ",
+    "street2": "DR JUAN B MORELLI",
+    "street1Id": 1737,
+    "street2Id": 4575,
+    "location": { "type": "Point", "coordinates": [-56.12814706, -34.86961886] }
+  },
+  {
+    "busstopId": 6278,
+    "street1": "DR BARTOLOME VIGNALE",
+    "street2": "AURELIA RAMOS DE SEGARRA",
+    "street1Id": 7296,
+    "street2Id": 6468,
+    "location": { "type": "Point", "coordinates": [-56.14068521, -34.81921665] }
+  },
+  {
+    "busstopId": 6279,
+    "street1": "AURELIA RAMOS DE SEGARRA",
+    "street2": "CNO DOMINGO ARENA",
+    "street1Id": 6468,
+    "street2Id": 501,
+    "location": { "type": "Point", "coordinates": [-56.14129975, -34.8177443] }
+  },
+  {
+    "busstopId": 6281,
+    "street1": "AV LEZICA",
+    "street2": "AV GRAL EUGENIO GARZON",
+    "street1Id": 3918,
+    "street2Id": 2955,
+    "location": { "type": "Point", "coordinates": [-56.22533402, -34.80428077] }
+  },
+  {
+    "busstopId": 6282,
+    "street1": "CAMOENS",
+    "street2": "MILTON",
+    "street1Id": 1497,
+    "street2Id": 4464,
+    "location": { "type": "Point", "coordinates": [-56.20213864, -34.82692555] }
+  },
+  {
+    "busstopId": 6301,
+    "street1": "C INT PEAT S/D",
+    "street2": "PJE PEAT S/D",
+    "street1Id": 9567,
+    "street2Id": 9566,
+    "location": { "type": "Point", "coordinates": [-56.1327263, -34.85495314] }
+  },
+  {
+    "busstopId": 6302,
+    "street1": "CNO PAJAS BLANCAS",
+    "street2": "CNO CONDE",
+    "street1Id": 999,
+    "street2Id": 2087,
+    "location": { "type": "Point", "coordinates": [-56.36181775, -34.84536582] }
+  },
+  {
+    "busstopId": 6303,
+    "street1": "GRAL HORNOS",
+    "street2": "CARLOS ANGEL GARRE",
+    "street1Id": 3393,
+    "street2Id": 2957,
+    "location": { "type": "Point", "coordinates": [-56.23774639, -34.83905598] }
+  },
+  {
+    "busstopId": 6304,
+    "street1": "FARAMIÑAN",
+    "street2": "CNO CARLOS MARIA DE PENA",
+    "street1Id": 2658,
+    "street2Id": 5352,
+    "location": { "type": "Point", "coordinates": [-56.23524741, -34.83869322] }
+  },
+  {
+    "busstopId": 6311,
+    "street1": "CAMPOAMOR",
+    "street2": "CAMBAY",
+    "street1Id": 1524,
+    "street2Id": 1491,
+    "location": { "type": "Point", "coordinates": [-56.11586726, -34.86597523] }
+  }
+]
